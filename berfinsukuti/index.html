@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berfin Aleyna Sukuti</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <video autoplay muted loop class="background-video">
+      <source src="javca.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- <div class="home-content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Explore my journey, projects, and get in touch!</p>
+    </div> -->
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-background"></div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>Hello World! I am an IT Support Specialist and Jr. Software Developer. I graduated from Halç University’s Computer Technology program in 2023 and am currently continuing my education at Anadolu University in the Management Information Systems program. I have been working as an IT Specialist for over a year and continue to develop my own projects.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="video-overlay">
+      <video autoplay muted loop class="background-video">
+        <source src="proje.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="section-header">
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="voice.jpg" alt="Project 1">
+        <h3>VoiceBot</h3>
+        <p>VoiceBot, Python kullanarak yazılmış bir masaüstü programıdır. Sesli programımız Siri benzeri bir yapıya sahiptir ve hem text to voice hem de voice to text yapabilmekttedir.</p>
+        <a href="https://github.com/berfinsukuti/VoiceBot" target="_blank">GitHub Linki</a>
+      </div>
+      <div class="project-card">
+        <img src="journeyvista.jpg" alt="Project 2">
+        <h3>JourneyVista</h3>
+        <p>JourneyVista, tur operatörleri veya acenteleri için tasarlanmış bir map-list web uygulamasıdır. Django ve react.js kullanılarak yazılmıştır. Tur bilgilerini girip, güncelleyip ve silip düzenleyebileceğiniz bir panele sahiptir ve tur bilgilerini restAPI ile çağırmaktadır. Ayrıca OpenStreetMap ile ücretsiz API alınmış ve harita görünümü elde edilmiştir. Ayrıca ekranda liste olarak da API'den çekilen tur bilgileri listelenir.
+        </p>
+        <a href="https://github.com/berfinsukuti/map-list" target="_blank">GitHub Linki</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="video-overlay">
+      <video autoplay muted loop class="background-video">
+        <source src="iletisim.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="section-header">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Address:</strong> Florya, İSTANBUL</p>
+        <p><strong>Phone:</strong> <a href="tel:+905545142597">+90 554 514 25 97</a></p>
+        <p><strong>Email:</strong> <a href="mailto:berfinsukuti.01@hotmail.com">berfinsukuti.01@hotmail.com</a></p>
+        <div class="social-icons">
+          <a href="https://instagram.com/berfinsukuti" target="_blank"><img src="social.png" alt="Instagram"></a>
+          <a href="https://twitter.com/berfinsukuti" target="_blank"><img src="twitter.png" alt="X"></a>
+          <a href="https://linkedin.com/in/berfin-aleyna-sukuti" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <!-- <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script> -->
+<!-- <script>
+  (function() {
+    emailjs.init("X4BS3_JlfS3uG8EuR"); // Public key burada kullanılır
+  })();
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_zjfedfu", "template_xkrc72x", this)
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send message. Please try again.");
+        console.error("Error:", error);
+      });
+  });
+</script> -->
+<form id="form">
+    <div class="field">
+      <label for="from_name">Name</label>
+      <input type="text" name="from_name" id="from_name" placeholder="Name">
+    </div>
+    <div class="field">
+      <label for="to_name">To</label>
+      <input type="text" name="to_name" id="to_name" placeholder="Kime">
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <input type="text" name="message" id="message" placeholder="Message">
+    </div>
+    <div class="field">
+      <label for="reply_to">Reply</label>
+      <input type="text" name="reply_to" id="reply_to">
+    </div>
+  
+    <input type="submit" id="button" value="Send Email" >
+  </form>
+  
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('X4BS3_JlfS3uG8EuR')
+  </script>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Berfin Aleyna Sukuti. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
